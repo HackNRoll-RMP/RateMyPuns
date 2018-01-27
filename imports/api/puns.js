@@ -1,6 +1,6 @@
 import { Mongo } from 'meteor/mongo';
  
-export const Puns = new Mongo.Collection('puns');
+Puns = new Mongo.Collection('puns');
 
 let PunsSchema = new SimpleSchema({
 	'owner': {
@@ -10,6 +10,10 @@ let PunsSchema = new SimpleSchema({
 	'pun': {
 		type: String,
 		label: 'The content of the pun.'
+	},
+	'pun-points': {
+		type: Number,
+		label: 'The pun points.'
 	},
 	'timestamp': {
 		type: Date,
