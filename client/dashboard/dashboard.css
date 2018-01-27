@@ -12,7 +12,6 @@ html, body {
 }
 
 .container {
-  overflow: hidden;
   display: block;
   position: absolute;
   width: 100%;
@@ -152,6 +151,7 @@ html, body {
 
 .container .panel {
   position: absolute;
+  overflow-y: auto;
   display: block;
   float: left;
   width: 100%;
