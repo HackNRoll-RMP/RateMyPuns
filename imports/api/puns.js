@@ -15,7 +15,11 @@ let PunsSchema = new SimpleSchema({
 		type: String,
 		label: 'The content of the pun.'
 	},
-	'punpoints': {
+	'punpointsPos': {
+		type: Number,
+		label: 'The pun points.'
+	},
+	'punpointsNeg': {
 		type: Number,
 		label: 'The pun points.'
 	},

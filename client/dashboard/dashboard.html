@@ -8,6 +8,9 @@
         {{> userdata}}
       </div>
       <ul>
+        <!-- <button class="hot ion-person-stalker">HOT</button> -->
+        <li><a href="#" class="sortHotClass"><i class="ion-person-stalker"></i>HOT</a></li>
+        <li><a href="#" class="sortFreshClass"><i class="ion-person-stalker"></i>Fresh</a></li>
         <li><a href="{{pathFor route='dashboard'}}"><i class="ion-person-stalker"></i>Dashboard</a></li>
         <li><a href="{{pathFor route='upload'}}"><i class="ion-upload"></i>User Details</a></li>
         <li><a href="#" class="logout"><i class="ion-log-out"></i>Log Out</a></li>
@@ -17,7 +20,7 @@
     <div class="panel">
       <div class="panel-bar">
         <form class="new-pun">
-          <input type="text" id="pun" placeholder="Right Pun here, the write way." />
+          <input type="text" id="pun" placeholder="Write Pun here" />
         </form>
       </div>
       <br>
@@ -38,15 +41,13 @@
     </div>
     <br>
     {{pun}}
-
     <div class="pointcss">
-
-       <button class="button punny">Punny</button>
-        <button class="button unpunny">Unpunny</button>
-        <div class="points">
-          <p >{{counter}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{count}}</p>
-        </div>
+      <button class="button punny">Punny</button>
+      <button class="button unpunny">Unpunny</button>
+      <div class="points">
+        <p >{{counter}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{count}}</p>
       </div>
+    </div>
     <br>
   </div>
 </template>
