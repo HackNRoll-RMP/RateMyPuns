@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Puns } from '../../imports/api/puns.js';
 import { ReactiveVar } from 'meteor/reactive-var';
@@ -31,6 +32,7 @@ Template.dashboard.events({
     // Insert a task into the collection
     Puns.insert({
       owner: Meteor.userId(),
+      username: Meteor.user().username,
       pun: text,
       punpoints: 0,
       timestamp: new Date(), // current time

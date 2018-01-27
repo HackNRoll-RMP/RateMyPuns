@@ -16,6 +16,7 @@ Template.signup.events ({
 
     if (password === password1) {
       Accounts.createUser({
+        username: name,
         email: email,
         password: password,
       },
@@ -41,5 +42,13 @@ Template.signup.events ({
       booleanPassword = !booleanPassword;
       Router.go("/dashboard");
     }
-  }
+
+  Meteor.users.update(
+      {_id: Meteor.userId()},
+      {$set: {
+          "username":name,
+        }
+      },
+  );
+  },
 });
