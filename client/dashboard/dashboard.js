@@ -73,6 +73,12 @@ Template.card.helpers({
   }
 });
 
+Template.userdata.helpers({
+  userdata(){
+    return Meteor.user().username;
+  }
+});
+
 //var counter;
 
 
@@ -80,4 +86,3 @@ Template.card.helpers({
 
 
 // Helpers
-
