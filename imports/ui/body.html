@@ -1,0 +1,20 @@
+<body>
+  <div class="central">
+    <h1>Fun in Pun. Heck yea</h1>
+
+    {{> punny}}
+    {{> unpunny}}
+
+  </div>
+</body>
+
+
+<template name="punny">
+    <button class="button punny">Punny</button>
+    <p >{{counter}}</p>
+</template>
+
+<template name="unpunny">
+    <button class="button unpunny">Unpunny</button>
+    <p >{{count}}</p>
+</template>

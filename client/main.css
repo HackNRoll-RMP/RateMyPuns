@@ -282,3 +282,44 @@ html, body {
     text-align: left;
     padding: 8px;
 }
+
+.central {
+	text-align: center;
+}
+.button {
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.punny {background-color: white; 
+    	color: black; 
+    	border: 2px solid #4CAF50;
+    	border-radius: 8px; 
+    	padding: 8px 8px;}
+
+
+ .punny:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.unpunny {border: 2px solid #f44336;
+		  border-radius: 8px;  
+		  padding: 8px 8px;}
+
+.unpunny:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
