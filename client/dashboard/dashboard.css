@@ -162,8 +162,14 @@ html, body {
   box-sizing: border-box;
 }
 
-.container .panel. panelbar {
+.container .panel .panel-bar {
+  margin-top: 20px;
+}
 
+#pun {
+  text-indent: 10px;
+  height: 50px;
+  width: 900px;
 }
 
 
