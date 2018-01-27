@@ -162,6 +162,10 @@ html, body {
   box-sizing: border-box;
 }
 
+.container .panel. panelbar {
+   
+}
+
 
 .container .panel .header ul {
   list-style-type: none;
