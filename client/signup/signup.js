@@ -5,6 +5,7 @@ import './signup.html';
 Template.signup.events ({
   'submit form': function(event, template) {
     event.preventDefault();
+    var name = template.find('#name').value;
     var email = template.find('#email').value;
     var password = template.find('#password').value;
     var password1 = template.find('#password1').value;
@@ -35,9 +36,10 @@ Template.signup.events ({
 
     if (booleanPassword == false && booleanError == false) {
       console.log("User created");
-      //Router.go('/signup-details');
+
       booleanError = !booleanError;
       booleanPassword = !booleanPassword;
+      Router.go("/dashboard");
     }
   }
 });
