@@ -1,5 +1,5 @@
 import { Mongo } from 'meteor/mongo';
- 
+
 export const Puns = new Mongo.Collection('puns');
 
 let PunsSchema = new SimpleSchema({
@@ -7,6 +7,10 @@ let PunsSchema = new SimpleSchema({
 		type: String,
 		label: 'The ID of the user that created the pun.'
 	},
+  'username': {
+    type: String,
+    label: 'The username of the user.'
+  },
 	'pun': {
 		type: String,
 		label: 'The content of the pun.'
