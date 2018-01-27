@@ -14,9 +14,9 @@ Template.login.events ({
         console.log(error.reason);
         alert(error.reason);
       }
-      /*else {
+      else {
         Router.go("/dashboard");
-      }*/
+      }
     });
   }
 });

@@ -1,13 +1,41 @@
 <template name="dashboard">
   <div class="container">
-  <div class="menu">
-    <div class="title">
-      <h1>RateMyPuns</h1>
+    <div class="menu">
+      <div class="title">
+        <h1>RateMyPuns</h1>
+      </div>
+      <ul>
+        <li><a href="{{pathFor route='dashboard'}}"><i class="ion-person-stalker"></i>Dashboard</a></li>
+        <li><a href="{{pathFor route='upload'}}"><i class="ion-upload"></i>User Details</a></li>
+        <li><a href="#" class="logout"><i class="ion-log-out"></i>Log Out</a></li>
+      </ul>
     </div>
-    <ul>
-			<li><a href="{{pathFor route='dashboard'}}"><i class="ion-person-stalker"></i>Dashboard</a></li>
-			<li><a href="#" class="logout"><i class="ion-log-out"></i>Log Out</a></li>
-		</ul>
+
+    <div class="panel">
+      <form class="new-pun">
+        <input type="text" id="pun" placeholder="Write Pun here" />
+      </form>
+      <br>
+      <div>
+        {{#each punlist}}
+          {{> card}}
+          <br>
+        {{/each}}
+      </div>
+    </div>
   </div>
+</template>
+
+<template name="card">
+  <div class="cardcss">
+    <div class="ownercss">
+      {{owner}}
+    </div>
+    <br>
+    {{pun}}
+    <br>
+    <div class="pointcss">
+      {{punpoints}}
+    </div>
   </div>
 </template>
