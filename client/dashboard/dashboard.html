@@ -32,12 +32,31 @@
   <div class="cardcss">
     <div class="ownercss">
       {{owner}}
+
     </div>
     <br>
     {{pun}}
-    <br>
+
     <div class="pointcss">
-      {{punpoints}}
-    </div>
+      
+       <button class="button punny">Punny</button>
+        <button class="button unpunny">Unpunny</button>
+        <div class="points">
+          <p >{{counter}}&nbsp;&nbsp;&nbsp;&nbsp;{{count}}</p>
+        </div>
+      </div>
+
+    <br>
+
   </div>
+</template>
+
+<template name="punny">
+   <p >{{counter}}</p>
+    <button class="button punny">Punny</button>
+</template>
+
+<template name="unpunny">
+   <p >{{count}}</p>
+    <button class="button unpunny">Unpunny</button>
 </template>
