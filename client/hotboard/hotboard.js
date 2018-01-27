@@ -3,9 +3,9 @@ import { Template } from 'meteor/templating';
 import { Puns } from '../../imports/api/puns.js';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import './dashboard.html';
+import './hotboard.html';
 
-Template.dashboard.events({
+Template.hotboard.events({
 
   'click .logout' :function(event) {
     event.preventDefault();
@@ -33,33 +33,32 @@ Template.dashboard.events({
     // Clear form
     //document.location.reload(true);
   },
-});
 
-Template.card.events({
+});
+Template.hotcard.events({
   'click button.punny'(event,instance){
         Puns.update(this._id, {
           $set: { "punpointsPos": this.punpointsPos+1 },
         });
-        //document.location.reload(true);
     },
 });
 
-Template.card.events({
+Template.hotcard.events({
   'click button.unpunny'(event,instance){
         Puns.update(this._id, {
           $set: { "punpointsNeg": this.punpointsNeg-1 },
         });
-        //document.location.reload(true);
     },
 });
 
-Template.dashboard.helpers({
+Template.hotboard.helpers({
   punlist() {
-      return Puns.find({}, { sort : { timestamp: -1} });
+      //Puns.find({}, { sort : { punpointsNeg: -1} });
+      return Puns.find({}, { sort : {punpointsPos : -1, punpointsNeg : -1}});
   },
 });
 
-Template.userdata.helpers({
+Template.userdataHot.helpers({
   userdata(){
     return Meteor.user().username;
   }
