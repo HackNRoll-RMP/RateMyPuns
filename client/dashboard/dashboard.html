@@ -4,6 +4,9 @@
       <div class="title">
         <h1>RateMyPuns</h1>
       </div>
+      <div class="userdata">
+        {{> userdata}}
+      </div>
       <ul>
         <li><a href="{{pathFor route='dashboard'}}"><i class="ion-person-stalker"></i>Dashboard</a></li>
         <li><a href="{{pathFor route='upload'}}"><i class="ion-upload"></i>User Details</a></li>
@@ -37,16 +40,14 @@
     {{pun}}
 
     <div class="pointcss">
-      
+
        <button class="button punny">Punny</button>
         <button class="button unpunny">Unpunny</button>
         <div class="points">
-          <p >{{counter}}&nbsp;&nbsp;&nbsp;&nbsp;{{count}}</p>
+          <p >{{counter}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{count}}</p>
         </div>
       </div>
-
     <br>
-
   </div>
 </template>
 
@@ -58,4 +59,8 @@
 <template name="unpunny">
    <p >{{count}}</p>
     <button class="button unpunny">Unpunny</button>
+</template>
+
+<template name="userdata">
+  <p>{{userdata}}</P>
 </template>
