@@ -31,7 +31,7 @@ Template.hotboard.events({
     });
 
     // Clear form
-    //document.location.reload(true);
+    template.find('#pun').value = '';
   },
 
 });
@@ -40,6 +40,9 @@ Template.hotcard.events({
         Puns.update(this._id, {
           $set: { "punpointsPos": this.punpointsPos+1 },
         });
+    },
+    'click button.delete'() {
+      Puns.remove(this._id);
     },
 });
 

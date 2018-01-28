@@ -305,7 +305,7 @@ html, body {
 
 .cardcss {
   background-color: #edeff2;
-  height: 125px;
+  height: 150px;
   width: 900px;
 
   padding-left: 12px;
@@ -320,12 +320,12 @@ html, body {
 
 .cardcss .pointcss {
   text-align: right;
-  margin-bottom: 80px;
+  margin-bottom: 90px;
   margin-right: 10px;
 }
 
-.cardcss .pointcss .points {
-
+.cardcss .delete {
+  margin-left: 800px;
 }
 
 .button {
