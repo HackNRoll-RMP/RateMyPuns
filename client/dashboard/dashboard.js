@@ -31,7 +31,7 @@ Template.dashboard.events({
     });
 
     // Clear form
-    //document.location.reload(true);
+    template.find('#pun').value = '';
   },
 });
 
@@ -42,6 +42,9 @@ Template.card.events({
         });
         //document.location.reload(true);
     },
+    'click button.delete'() {
+    	Puns.remove(this._id);
+  	},
 });
 
 Template.card.events({
